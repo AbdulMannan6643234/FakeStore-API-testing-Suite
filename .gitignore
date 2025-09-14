@@ -1,0 +1,12 @@
+# Java / Selenium ignores 
+/target 
+/test-output 
+/build 
+.vscode/ 
+.idea/ 
+*.iml 
+*.log 
+chromedriver.exe 
+chromedriver 
+geckodriver.exe 
+geckodriver 
