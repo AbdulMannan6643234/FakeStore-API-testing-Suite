@@ -51,7 +51,7 @@ mvn test -DsuiteXmlFile=testng.xml
 ```
 **5. View reports:** target/surefire-reports/index.html
 ## Test Results
-Smoke Tests: 32/32 Passed
+Smoke Tests: 34/34 Passed
 
 ![smoke tests](/screenshots/smoke.png)
 
