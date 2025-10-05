@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Fake-Store-API Test Suite" parallel="false">
+   
+    <test name="Smoke Tests">
+        <groups>
+        <run>
+            <include name = "smoke"/>
+        </run>
+        </groups>
+        <classes>
+        <class name="tests.Base.BaseTests" />
+        <class name="tests.Auth.authTests" />
+        <class name="tests.userTests.userCreationTests" />
+        <class name="tests.userTests.userUpdationTests" />
+        <class name="tests.userTests.userDeletionTests" />
+        <class name="tests.userTests.userRetrievalTests" />
+        <class name="tests.productTests.productRetrievalTests"/>
+        <class name="tests.productTests.productCreationTests"/>
+        <class name="tests.productTests.productDeletionTests"/>
+        <class name="tests.productTests.productUpdationTests"/>
+        <class name="tests.cartTests.cartCreationTests"/>
+        <class name="tests.cartTests.cartDeletionTests"/>
+        <class name="tests.cartTests.cartUpdationTests"/>
+        <class name="tests.cartTests.cartRetrievalTests"/>
+        </classes>
+    </test>
+        <test name="Regression Tests">
+        <groups>
+        <run>
+            <include name = "regression"/>
+        </run>
+        </groups>
+        <classes>
+        <class name="tests.Base.BaseTests" />
+        <class name="tests.Auth.authTests" />
+        <class name="tests.userTests.userCreationTests" />
+        <class name="tests.userTests.userUpdationTests" />
+        <class name="tests.userTests.userDeletionTests" />
+        <class name="tests.userTests.userRetrievalTests" />
+        <class name="tests.productTests.productRetrievalTests"/>
+        <class name="tests.productTests.productCreationTests"/>
+        <class name="tests.productTests.productDeletionTests"/>
+        <class name="tests.productTests.productUpdationTests"/>
+        <class name="tests.cartTests.cartCreationTests"/>
+        <class name="tests.cartTests.cartDeletionTests"/>
+        <class name="tests.cartTests.cartUpdationTests"/>
+        <class name="tests.cartTests.cartRetrievalTests"/>
+        </classes>
+    </test>
+    <test name="KnownBug Tests">
+        <groups>
+        <run>
+            <include name = "knownBug"/>
+        </run>
+        </groups>
+        <classes>
+        <class name="tests.Base.BaseTests" />
+        <class name="tests.Auth.authTests" />
+        <class name="tests.userTests.userCreationTests" />
+        <class name="tests.userTests.userUpdationTests" />
+        <class name="tests.userTests.userDeletionTests" />
+        <class name="tests.userTests.userRetrievalTests" />
+        <class name="tests.productTests.productRetrievalTests"/>
+        <class name="tests.productTests.productCreationTests"/>
+        <class name="tests.productTests.productDeletionTests"/>
+        <class name="tests.productTests.productUpdationTests"/>
+        <class name="tests.cartTests.cartCreationTests"/>
+        <class name="tests.cartTests.cartDeletionTests"/>
+        <class name="tests.cartTests.cartUpdationTests"/>
+        <class name="tests.cartTests.cartRetrievalTests"/>
+        </classes>
+    </test>
+
+</suite>
