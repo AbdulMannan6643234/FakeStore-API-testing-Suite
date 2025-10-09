@@ -19,7 +19,7 @@ public class BaseTests {
     public void setUp(){
         var auth = new authService();
         var request = new auth("mor_2314","83r5^_" );
-        token = auth.authentication(request).then().extract().path("token");
+        token = auth.authentication(request).then().extract().asString();
         reqSpec = new RequestSpecBuilder()
         .setBaseUri("https://fakestoreapi.com")
         .addCookie("token", token)
