@@ -32,6 +32,7 @@ public class cartRetrievalTests extends BaseTests{
         var getCart = new cartService();
         var response = getCart.getCartById(-1, reqSpec)
         .then()
+        .log().all()
         .spec(successfulResSpec)
         .extract().asString();
         assertEquals(response,"null", "Cart found With Negative Id");

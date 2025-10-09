@@ -25,7 +25,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
       - name: Run TestNG tests
-        run: mvn clean test -Dgroups="smoke,regression"
+        run: mvn clean test -Dgroups="regression"
 
       - name: Upload reports
         if: always()

@@ -25,6 +25,7 @@ public class cartService {
             return given()
             .spec(reqSpec)
             .pathParam("id", id)
+            .log().all()
             .when()
             .get("/carts/{id}");
         }
