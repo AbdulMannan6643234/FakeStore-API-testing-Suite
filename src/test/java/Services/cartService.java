@@ -25,10 +25,8 @@ public class cartService {
             return given()
             .spec(reqSpec)
             .pathParam("id", id)
-            .log().all()
             .when()
             .get("/carts/{id}");
-            //ks
         }
         public Response createCart(RequestSpecification reqSpec,Object request){
             return given()
