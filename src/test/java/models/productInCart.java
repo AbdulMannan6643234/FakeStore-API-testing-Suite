@@ -14,6 +14,7 @@ public class productInCart {
         }
         public void setProductId(int productId) {
             this.productId = productId;
+       //test
         }
         public int getQuantity() {
             return quantity;
