@@ -31,7 +31,6 @@ public class productRetrievalTests extends BaseTests{
         var getProduct = new productService();
         var response = getProduct.getProductById(-1, reqSpec)
         .then()
-        .log().all()
         .spec(successfulResSpec)
         .extract().asString();
         assertTrue(response.isBlank(), "Product found With Negative Id");
