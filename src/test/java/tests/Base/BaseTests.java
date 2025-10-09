@@ -24,6 +24,7 @@ public class BaseTests {
         .setBaseUri("https://fakestoreapi.com")
         .addCookie("token", token)
         .setContentType("application/json")
+        .addHeader("Accept", "application/json")
         .build();
         successfulResSpec = new ResponseSpecBuilder()
         .expectStatusCode(200)
