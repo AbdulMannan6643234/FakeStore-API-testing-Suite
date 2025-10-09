@@ -30,15 +30,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashfiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: Clone and run API locally and tests
-        run: | 
-          git clone https://github.com/keikaavousi/fake-store-api.git fakestore
-          cd fakestore
-          npm install
-          npm start &
-          sleep 8 # wait for the API to start
-          cd ..
-          mvn clean test -Dgroups="smoke,regression"
+      - name: Run TestNG tests
+        run: mvn clean test -Dgroups="smoke,regression"
       - name: Upload reports
         if: always()
         uses: actions/upload-artifact@v4
