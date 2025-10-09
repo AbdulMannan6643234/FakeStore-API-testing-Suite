@@ -26,8 +26,18 @@ jobs:
           git clone https://github.com/keikaavousi/fake-store-api.git fakestore
           cd fakestore
           npm install
-          nohup npm start & # start local API in background
-          sleep 5 # wait a few seconds for server to start
+          nohup npm start > server.log 2>&1 &
+          echo "Waiting for Fake Store API to start..."
+          for i in {1..20}; do
+            if curl -s http://localhost:3000/products >/dev/null; then
+              echo "✅ Fake Store API is up!"
+              break
+            fi
+            echo "⏳ Waiting... ($i/20)"
+            sleep 2
+          done
+          curl -I http://localhost:3000 || (echo "❌ API failed to start" && exit 1)
+
 
       - name: Cache Maven Dependencies
         uses: actions/cache@v4
